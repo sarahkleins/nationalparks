@@ -1,0 +1,70 @@
+body, html, main {
+  /* important */
+  height: 100%; }
+
+.fixed-bg, .fixed-footer {
+  min-height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.fixed-footer {
+  min-height: 25%; }
+
+/*might need a fix here*/
+.fixed-bg.img-bg-1, .img-bg-1.fixed-footer {
+  background-image: url("../img/natlparks.jpg"); }
+
+/*might need a fix here*/
+.fixed-footer.img-bg-2 {
+  background-image: url("../img/mountains.jpeg"); }
+
+.container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto; }
+
+.container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both; }
+
+.scrolling-bg {
+  position: relative;
+  min-height: 100%;
+  padding: 4em 0;
+  line-height: 1.6;
+  /*  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/
+  z-index: 2;
+  background-color: #E9E5DA; }
+
+#layer0 > path {
+  fill: #4C4B37; }
+  #layer0 > path:hover {
+    fill: #6F998F; }
+
+.headline h1 {
+  font-family: Open Sans;
+  font-weight: 700;
+  font-size: 67px;
+  letter-spacing: 2px;
+  color: #6F998F; }
+.headline h2 {
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 2em;
+  margin-top: -15px;
+  letter-spacing: 2px;
+  color: #C69630; }
+
+#footer-text {
+  font-family: Lobster;
+  color: #fffafa;
+  font-size: 35px;
+  padding: 2.5em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
+
+/*# sourceMappingURL=main.css.map */

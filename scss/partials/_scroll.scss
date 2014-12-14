@@ -1,0 +1,53 @@
+// scroll & body
+body, html, main {
+	/* important */
+	height: 100%;
+}
+
+.fixed-bg {
+	min-height: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.fixed-footer{
+	@extend .fixed-bg;
+	min-height: 25%;
+}
+
+/*might need a fix here*/
+.fixed-bg.img-bg-1 {
+  background-image: url("../img/natlparks.jpg");
+}
+
+/*might need a fix here*/
+.fixed-footer.img-bg-2 {
+  background-image: url("../img/mountains.jpeg");
+}
+
+.container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.scrolling-bg {
+  position: relative;
+  min-height: 100%;
+  padding: 4em 0;
+  line-height: 1.6;
+/*  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/
+  z-index: 2;
+  background-color: $lightbackground;
+}
+

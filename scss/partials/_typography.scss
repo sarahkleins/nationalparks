@@ -1,0 +1,27 @@
+.headline {
+	h1 {
+		font-family: $headline-font;
+		font-weight: 700;
+		font-size: 67px;
+		letter-spacing: 2px;
+		color: $teal;
+	}
+
+	h2{
+	font-family: $headline-font;
+	font-weight: 600;
+	font-size: 2em;
+	margin-top: -15px;
+	letter-spacing: 2px;
+	color: #C69630;
+	}
+
+}
+
+#footer-text {
+  font-family: $footer-font;
+  color: $snow;
+  font-size: 35px;
+  padding: 2.5em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}

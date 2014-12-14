@@ -1,0 +1,70 @@
+MAP PROJECT
+
+Mapbox Maki for icons - https://www.mapbox.com/maki/
+
+So far:
+
+Using LET'S MAKE A MAP TUTORIAL - http://bost.ocks.org/mike/map/
+DAY 11: MAKE A MAP - http://d3.nathanrosquist.com/2014/04/
+
+RAW DATA
+Natural Earth: http://www.naturalearthdata.com/downloads/10m-cultural-vectors/parks-and-protected-lands/
+Mapbox: 
+http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-us-parks-point.zip
+http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-us-parks-area.zip
+http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-us-parks-line.zip
+
+Extracted National Parks into JSON file
+
+brew install gdal - Install GDAL
+
+sudo npm install topojson - Install TopoJSON
+
+cd into file directory
+
+Example
+ogr2ogr \
+  -f GeoJSON \
+  -where "ADM0_A3 IN ('GBR', 'IRL')" \
+  subunits.json \
+  ne_10m_admin_0_map_subunits.shp
+
+Actual
+ogr2ogr \
+  -f GeoJSON \
+  -where "UNIT_TYPE IN ('NATIONAL PARK')" \
+  subunits.json \
+  10m_us_parks_point.shp
+
+To figure out how to filter
+ogr2ogr \
+  -f GeoJSON \
+  subunits.json \
+  10m_us_parks_point.shp
+And open in Sublime
+
+(May have to redo in real project directory)
+(May have to check what is in all file - seems different than Mapbox)
+
+Filter out which properties you don't need? http://www.tnoda.com/blog/2013-12-07
+
+Map - http://bl.ocks.org/mbostock/4136647 - Just copy this and drop in data? Try copying this code and see what happens. 
+
+1) First - try D3. Copy code exactly and just see what happens.  Try to load in JSON data.
+
+2) Consider using Mapbox.js (seems more approachable) - https://www.mapbox.com/mapbox.js/example/v1.0.0/coffeescript/. Examples in scroll bar on the left. Found: how to add custom markers. Mapbox MAKI. First map free?
+
+Create Map on mapbox.com // from docs...
+// map refers to a <div> element with the ID map
+// examples.map-4l7djmvo is the ID of a map on Mapbox.com
+var map = L.mapbox.map('map', 'examples.map-4l7djmvo');
+
+// map refers to a <div> element with the ID map
+// This map will have no layers initially
+var map = L.mapbox.map('map');
+
+Event listeners (for clicks)
+
+Notes:
+Explain jquery
+Sass command: sass --watch scss/main.scss:css/main.css
