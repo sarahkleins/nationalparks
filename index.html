@@ -55,5 +55,30 @@
 		</div><!-- explore -->
 	</div><!-- fixed-footer img-bg-2 -->
 
+	<script src="js/dictionary.js"></script>
+	<script type="text/javascript">
+		function closeToolTips(){
+			$("path").each(function(){
+				try{
+					$(this).tooltip("destroy");
+				}
+				catch(err){
+				}
+			});
+		};
+
+	$("path").click(function(){
+		var elem = $(this);
+		var state = elem.attr("id");
+		closeToolTips();
+		elem.bind('mouseout focusout', function(event) {
+	            event.stopImmediatePropagation();
+	            });
+		elem.tooltip({
+			content: "<strong>" + STATE_DATA[state].name + "</strong><br>" + STATE_DATA[state].parks.join("<br>"),
+			items: "path",
+		}).tooltip('open');
+	});
+	</script>
 	</body>
 </html>
