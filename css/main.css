@@ -41,10 +41,13 @@ body, html, main {
   z-index: 2;
   background-color: #E9E5DA; }
 
-#layer0 > path {
-  fill: #4C4B37; }
-  #layer0 > path:hover {
+path.layer0 {
+  fill: #4C4B37;
+  stroke-width: 3; 
+  stroke-opacity: 1;}
+  path.layer0:hover {
     fill: #6F998F; }
+ 
 
 .headline h1 {
   font-family: Open Sans;
