@@ -24,4 +24,14 @@
   font-size: 35px;
   padding: 2.5em;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+
+  a{
+  	text-decoration: none;
+  }
+
+  a:visited {
+  	color: $snow;
+  }
+
 }
+
