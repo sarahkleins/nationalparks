@@ -44,21 +44,21 @@ body, html, main {
 #layer0 > path {
   fill: #4C4B37; }
   #layer0 > path:hover {
-    fill: #6F998F; }
+    fill: #5CAC99; }
 
 .headline h1 {
   font-family: Open Sans;
   font-weight: 700;
   font-size: 67px;
   letter-spacing: 2px;
-  color: #6F998F; }
+  color: #5CAC99; }
 .headline h2 {
   font-family: Open Sans;
   font-weight: 600;
   font-size: 2em;
   margin-top: -15px;
   letter-spacing: 2px;
-  color: #C69630; }
+  color: #E3A113; }
 
 #footer-text {
   font-family: Lobster;
